@@ -18,7 +18,9 @@ Practical Data Science with Python
 - Great libraries (pandas, numpy, scikit-learn, etc)
 - Flexible, powerful language
 - Everyone uses python
-<
+
+***
+
 Other options: R, SAS, Julia, Matlab
 
 [comment]: # (!!!)
@@ -82,7 +84,9 @@ From Kaggle 2021 Data Science Survey:
 ## Graphical Interface
 - Simple: Excel
 - Expensive: Tableau, SAS, Alteryx
- ![Tabeau](01_media/tableau.png)
+
+***
+
 "Business Intelligence"
 
 [comment]: # (!!!)
@@ -101,7 +105,7 @@ From Kaggle 2021 Data Science Survey:
 - Math (emphasizing optimization)
 - Business understanding and communication
 - Design of data visualizations
-
+***
 This course will **not** make you a data science expert.
 
 This course **will** make you employable in data science.
