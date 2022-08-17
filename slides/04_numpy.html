@@ -1,10 +1,25 @@
-[comment]: # (THEME = pdsp)
-[comment]: # (CODE_THEME = base16/zenburn)
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Practical Data Science with Python</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/pdsp.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/zenburn.min.css" id="highlight-theme"></head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section data-markdown  ><textarea data-template>
 
 ### Practical Data Science with Python
 # 4. Loading and Wrangling Data with pandas and NumPy 
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ## CSV (comma separated values)
 
@@ -25,7 +40,8 @@ df = pd.read_csv('employees.csv', index_col='employee_id')
 print(f"Rows: {row_count}") # Shows 6!
 print(f"Columns: {col_count}")
 ```
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ## pandas supported file types
 - CSV
@@ -35,7 +51,8 @@ print(f"Columns: {col_count}")
 - HTML
 - HDF5
 - SQL databases
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ## Series
 
@@ -50,11 +67,13 @@ salary_series.mean()
 an_employee = df.loc[4782566]
 first_employee = df.iloc[0]
 ```
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 # pandas demo!
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
  
  
 ## When data is too big (1)
@@ -77,7 +96,8 @@ with open('e.csv', 'r') as csv_file:
 		…
 ```
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 
 ## When data is too big (2)
@@ -88,7 +108,8 @@ with open('e.csv', 'r') as csv_file:
 # Read just the rows you need:
 df = pd.read_hdf('my.h5', 'results_table', where='age < 18')
 ```
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ## NumPy?
 
@@ -105,7 +126,8 @@ myshape = mymatrix.shape # (2,3)
 mytype = mymatrix.dtype  # int64
 ```
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ## pandas dataframe has np array
 
@@ -117,7 +139,8 @@ import numpy as np
 df = pandas.whatever() # Make a dataframe
 a = df.values
 ```
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown  ><textarea data-template>
 
 ## Handy numpy methods
 
@@ -128,8 +151,32 @@ r = myarray[-1, -1]    # -1 means "last"
 t = myarray.T          # transpose
 ```
 
-[comment]: # (!!!)
+</textarea></section>
+<section data-markdown ><textarea data-template>
 
 
 # Questions?
 
+</textarea></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+Reveal.initialize({
+controls : false,
+markdown : {smartypants: true},
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>
