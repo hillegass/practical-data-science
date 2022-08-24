@@ -51,10 +51,6 @@ an_employee = df.loc[4782566]
 first_employee = df.iloc[0]
 ```
 [comment]: # (!!!)
-
-# pandas demo!
-
-[comment]: # (!!!)
  
  
 ## When data is too big (1)
@@ -97,6 +93,7 @@ df = pd.read_hdf('my.h5', 'results_table', where='age < 18')
 - Very fast (for Python)
 - Data representation for scikit-learn and pandas
 - Can use GPU
+- Fixed size
 
 ```
 import numpy as np
@@ -129,6 +126,81 @@ t = myarray.T          # transpose
 ```
 
 [comment]: # (!!!)
+
+## Linear algebra
+
+$2 x_1 + 3 x_2 + 4 x_3 = 4$
+
+$9 x_1 + -2 x_2 + 4 x_3 = 5$
+
+$7 x_1 + 6 x_2 + 5 x_3 = -8$
+
+Becomes
+
+$\begin{bmatrix} 
+2 & 3 & 4 \\\\
+9 & -2 &4 \\\\
+7 & 6 & 5 \end{bmatrix} 
+\begin{bmatrix} 
+x_1 \\\\
+x_2 \\\\
+x_3\end{bmatrix} = 
+\begin{bmatrix} 
+4 \\\\ 5 \\\\ -8
+\end{bmatrix}$
+
+[comment]: # (!!!)
+
+## Linear algebra
+
+$A x = b$
+
+$x = A^{-1}b$
+
+```python
+A = np.array([[2,3,4],[9,-2,4],[7,6,5]])
+A_inv = np.linalg.inv(A)
+b = np.array([4,5,6])
+x = A_inv @ b
+```
+$x_1 = 0.18954248$
+
+$x_2 = 0.06535948$
+
+$x_3 = 0.85620915$
+
+[comment]: # (!!!)
+
+## Tensors
+
+Storing a data set in `X`, an np.array: 
+
+- 800 images
+- 1024 pixels tall
+- 2048 pixels wide
+- 3 channels (RGB): 
+
+`X.shape` is (800, 1024, 2048, 3)
+
+5 billion numbers!
+
+[comment]: # (!!!)
+
+## Broadcasting
+
+`X.shape` is (800, 1024, 2048, 3)
+
+
+```
+Y = X + 1
+
+a = np.array([1, 3, 7]) 
+# a.shape = (3,)
+Z = X + a
+
+R = #some image (1024, 2048, 3)
+W = X + R
+```
 
 
 # Questions?

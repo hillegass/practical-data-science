@@ -1,6 +1,8 @@
 [comment]: # (THEME = pdsp)
 [comment]: # (CODE_THEME = base16/zenburn)
+
 ### Practical Data Science with Python
+
 # 3. SQL and Built-in File Handling with Python
 
 [comment]: # (!!!)
@@ -31,9 +33,10 @@ with open('textfile.txt', 'r') as f:
 
 ```python
 dog_count = 3
-with open('textfile.txt', 'w',  newline='\n') as f:
-	print(f"There are {dog_count} dogs.", file=f)
-	print(f"{dog_count * 2} is twice as many.", file=f)
+with open('textfile.txt', 'w') as outfile:
+	outfile.write(f"There are {dog_count} dogs.\n")
+	word_list = ["Apple","Bean","Carrot"]
+	outfile.writelines(word_list)
 
 ```
 - `newline=`
@@ -230,10 +233,15 @@ sqlite> SELECT Title, Name
 		ON Album.ArtistId = Artist.ArtistID
 	ORDER BY Title
 	LIMIT 3;
+```
+
+
+```
 ...And Justice For All|Metallica
 20th Century Masters Collection: Best of Scorpions|Scorpions
 A Copland Celebration, Vol. I|London Symphony Orchestra
 ```
+
 
 LEFT JOIN: "If the Album has a null ArtistID, include it"
 [comment]: # (!!!)

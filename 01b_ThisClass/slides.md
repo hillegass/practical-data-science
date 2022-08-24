@@ -78,8 +78,17 @@ In Person: Wednesdays from 12:30 to 2:00 in Room 718 in 1 Park Place
 
 Webex: Thursdays from 12:30 to 2:00.  Link will be in iCollege
 
+[comment]: # (!!!)
+
 ## TAs
 
+| Called | Name | Email | Office hours |
+|--------|------|-------|---------------
+| Tharun |  Tharun Chamarthi | tchamarthi1@student.gsu.edu | Attending lectures |
+|Jas | Jasmika Vemulapalli &|jvemulapalli1@student.gsu.edu | 9:00 - 10:30 on Tues, Webex |
+|Frank | Weizhen Liu | wliu25@student.gsu.edu | 4:00 - 5:30 PM on Tues. Webex|
+|Ram | Adithya Ram B | aballem1@student.gsu.edu | 10:00 - 10:45 on Mon, Wed in person |
+| Yasaswini | Yasaswini Chandolu | ychandolu1@student.gsu.edu| TBD |
 
 
 
