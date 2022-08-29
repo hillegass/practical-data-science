@@ -202,6 +202,8 @@ R = #some image (1024, 2048, 3)
 W = X + R
 ```
 
+[comment]: # (!!!)
+
 
 # Questions?
 
