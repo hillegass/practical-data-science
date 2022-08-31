@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
+print(os.getcwd())
 x = np.linspace(-7, 7, 120)
 y = np.linspace(-7, 7, 120)
 X, Y = np.meshgrid(x, y)
