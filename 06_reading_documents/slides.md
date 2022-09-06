@@ -20,6 +20,7 @@ def series_report(
        series.name == "death" or 
        series.name == "employee_id":
 ```
+[comment]: # (!!!)
 
 ## Calling Julia from Python?
 
@@ -27,6 +28,7 @@ PyJulia framework
 
 <img src="06_media/PyJulia.png" alt="3d" height="550"/> 
 
+[comment]: # (!!!)
 
 ## glob and expanduser
 

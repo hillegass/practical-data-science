@@ -9,6 +9,8 @@
 
 ## Regression?
 
+Regression vs. Categorization
+[comment]: # (!!!)
 
 
 ## Data
@@ -97,11 +99,13 @@ What if we calculate this for every possible $(m, b)$?
 ## Gradient of L2 Error?
 
 $J(m, b) = 
-frac{1}{2}\sum_{i=1}^{n} \left( m x_i + b - y_i \right)^2$
+\frac{1}{2}\sum_{i=1}^{n} \left( m x_i + b - y_i \right)^2$
 
 So...
 
 $\frac{\partial J}{\partial m} = \sum_{i=1}^{n} x_i \left( m x_i + b - y_i \right)$
+
+
 $\frac{\partial J}{\partial b} = \sum_{i=1}^{n} \left( m x_i + b - y_i \right)$
 
 In matrices:
@@ -118,6 +122,20 @@ $\nabla J(B) = X^T (X B - Y) = X^T X B - X^TY = 0$
 $B = (X^T X)^{-1} X^T Y$
 
 When is this impossible? 
+
+
+[comment]: # (!!!)
+
+## Linearly Dependent Columns?
+
+$ X = \begin{bmatrix} \text{yards} & \text{meters} & \ldots \\\\
+200 & 182.88  & \ldots\\\\
+300 &  274.32  & \ldots\\\\
+400 & 365.76 & \ldots
+\end{bmatrix} \hspace{20mm}
+Y = \begin{bmatrix} \text{seconds} \\\\ 921\\\\ 640\\\\ 500
+\end{bmatrix}
+$
 
 
 [comment]: # (!!!)
@@ -145,6 +163,32 @@ Alternative when $N > 10^6$?
 
 [comment]: # (!!!)
 
+## Scikit-Learn
+
+```python
+from sklearn.linear_model import LinearRegression
+lin_reg = LinearRegression()
+lin_reg.fit(X, Y)
+B = np.insert(lin_reg.coef_, 0, lin_reg.intercept_)
+```
+
+Single Value Decomposition makes it a little faster and deals with linearly dependent columns more gracefully.
+
+```python
+R2 = lin_reg.score(X, Y)
+print(f"R2 = {R2:f}")
+```
+[comment]: # (!!!)
+
+## $R^2$
+
+Goodness of fit: 
+- Near 0? Bad fit, noisy data
+- Near 1? Good fit
+
+$R^2 = 1 - \frac{\sum_{i = 1}^{n} \left(y_i -\hat{y_i}\right)^2}{\sum_{i = 1}^{n} \left(y_i -\bar{y}\right)^2}$
+
+[comment]: # (!!!)
 
 
 # Questions?
