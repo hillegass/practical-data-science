@@ -178,6 +178,7 @@ Single Value Decomposition makes it a little faster and deals with linearly depe
 R2 = lin_reg.score(X, Y)
 print(f"R2 = {R2:f}")
 ```
+
 [comment]: # (!!!)
 
 ## $R^2$
@@ -190,6 +191,28 @@ $R^2 = 1 - \frac{\sum_{i = 1}^{n} \left(y_i -\hat{y_i}\right)^2}{\sum_{i = 1}^{n
 
 [comment]: # (!!!)
 
+## Gradient Descent Problem
+
+<img src="06b_media/ill_cond.png" alt="Contour" height="400"/>
+
+[comment]: # (!!!)
+
+## Standardize
+
+```python
+# Get the mean and standard deviation for each column
+means = X.mean(axis=0)
+std = X.std(axis=0)
+
+# Don't mess with the first column (the 1s)
+means[0] = 0.0
+std[0] = 1.0
+
+# Standardize X
+Xp = (X - means) / std
+```
+
+[comment]: # (!!!)
 
 # Questions?
 
