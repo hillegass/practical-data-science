@@ -43,7 +43,6 @@ address=95%20Decatur%20St%20SE%20Atlanta%20GA%2030303
 key=ABCDE1234567890ABCDE098775
 ```
 
-
 [comment]: # (!!!)
 
 ## What you get back

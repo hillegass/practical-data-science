@@ -60,7 +60,7 @@ N = 365
 
 ## Summarizing Error: Recall
 
-### "When actually True, how often does predicted True?"
+### "When actually True, how often predicted True?"
 
 ### Accuracy = $\frac{TP}{\text{Actual True}} = \frac{100}{120} \approx 83.3\\%$
 
@@ -153,10 +153,10 @@ N = 632
 
 ### $F1 = \frac{2 (\text{recall})(\text{precision})} {\text{recall} + \text{precision}}$
 
-<img src="07h_media/multirecall.png" height="150" /> 
-<img src="07h_media/multiprecision.png" height="180" /> 
+<img src="07h_media/multirecall.png" height="140" /> 
+<img src="07h_media/multiprecision.png" height="160" /> 
 
-<img src="07h_media/multiF1.png" height="300" /> 
+<img src="07h_media/multiF1.png" height="290" /> 
 
 
 [comment]: # (!!!)
