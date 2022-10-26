@@ -111,7 +111,7 @@ import pandas as pd
 import numpy as np
 
 
-df = pandas.whatever() # Make a dataframe
+df = pd.whatever() # Make a dataframe
 a = df.values
 ```
 [comment]: # (!!!)

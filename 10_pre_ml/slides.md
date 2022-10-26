@@ -138,6 +138,8 @@ cars = pd.concat([cars, car_colors], axis=1)
 | 3      | 0     | 0   | 1      |
 | 4      | 0     | 1     | 0    |
 
+"Resentative class"
+
 
 [comment]: # (!!!)
 

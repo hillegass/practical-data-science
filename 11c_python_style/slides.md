@@ -8,7 +8,7 @@
 [comment]: # (!!!)
 
 
-## DRY! (Don't Repeat Yourself)
+## DRY (Don't Repeat Yourself)
 
 - Blocks of code repeated? Use functions
 
@@ -39,6 +39,34 @@
 
 [comment]: # (!!!)
 
+## Naming stuff
+
+- Functions and variables are all lowercase with underscores as necessary for readability: `argmax` and `to_oval`
+- Classes and types should use capitals to start words: `SkipList` 
+- Constants in all caps: MAX_SIZE
+- Use ASCII characters for identifiers
+- Good variable names can be said aloud: not `ssstgk`
+- Be careful to misspell an identifier when you create it
+- Use the obvious antonym:  `start` and `stop`, not `start` and `end`
+
+[comment]: # (!!!)
+
+## Use broadcasting and matrix operations
+
+`x` is a $m \times n$ matrix,  `t` is a $m$ length vector. Add `t` to each column of `m`.
+
+```python
+for i in range(n):
+    for j in range[m):
+    	x[j, i] += t[j]
+```
+or
+```python
+x = (x.T + t).T
+``` 
+[comment]: # (!!!)
+
+
 ## Use assert
 
 Stops execution with message
@@ -50,16 +78,64 @@ assert result > 0, f"Error: do_something returned {result}!"
 
 To run without checks:
 ```text
-python -O mycode.py
+python3 -O mycode.py
 ```
 [comment]: # (!!!)
 
-## Give default values in functions
+## Use logging
 
 ```python
-def normalize(v, safe_method=True):
+m = x.mean()
+logger.debug(f"The mean is {x.mean():.2f}.")
+if m > 2:
+	print(f"These people are related.")
 ```
+
+```text
+DEBUG@13:46:12: The mean is 2.45.
+These people are related.
+```
+
+| Severity |
+| :---: |
+| CRITICAL |
+| ERROR |
+| WARNING |
+| INFO |
+| DEBUG |
+
 [comment]: # (!!!)
+
+## Configure logging
+
+```python
+import logging
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+h = logging.StreamHandler()
+f = logging.Formatter('%(levelname)s@%(asctime)s: %(message)s', 
+                              datefmt="%H:%M:%S")
+h.setFormatter(f)
+logger.addHandler(h)
+```
+
+[comment]: # (!!!)
+
+## Include a requirements.txt
+
+```text
+matplotlib>=2.2
+numpy
+pandas==1.4.4
+```
+
+```text
+> pip3 install -r requirements.txt
+```
+
+[comment]: # (!!!)
+
 
 ## Include README.rst
 
@@ -70,7 +146,8 @@ Like markdown
 TOML
 ****
 
-A Python library for parsing and creating `TOML <https://en.wikipedia.org/wiki/TOML>`_.
+A Python library for parsing and creating 
+`TOML <https://en.wikipedia.org/wiki/TOML>`_.
 
 See also:
 * `The TOML Standard <https://github.com/toml-lang/toml>`_
@@ -95,6 +172,14 @@ simply run:
 
 <img src="11c_media/rst.png" height="350" /> 
 
+[comment]: # (!!!)
+
+
+## Give default values in functions
+
+```python
+def normalize(v, safe_method=True):
+```
 [comment]: # (!!!)
 
 

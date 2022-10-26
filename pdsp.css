@@ -1,7 +1,6 @@
 /**
- * White theme for reveal.js. This is the opposite of the 'black' theme.
- *
- * By Hakim El Hattab, http://hakim.se
+ * Practical Data Science with Pythohn theme for reveal.js.
+ * By Aaron Hillegass
  */
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
@@ -17,8 +16,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-main-font-size: 42px;
   --r-table-font-size: 24px;
   --r-main-color: rgb(0, 0, 0);
-  --r-block-margin: 20px;
-  --r-heading-margin: 0 0 20px 0;
+  --r-block-margin: 10px;
+  --r-heading-margin: 0 0 10px 0;
   --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
   --r-heading-color: rgb(0, 0, 0);
   --r-heading-line-height: 1.2;
@@ -175,6 +174,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal ol ul {
   display: block;
   margin-left: 40px;
+  margin-top:10px;
 }
 
 .reveal dt {
@@ -208,8 +208,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal pre {
   display: block;
   position: relative;
-  width: 95%;
-  margin: var(--r-block-margin) auto;
+  width: 97%;
+  margin: 10px;
   text-align: left;
   font-size: 0.55em;
   font-family: var(--r-code-font);
@@ -228,7 +228,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   display: block;
   padding: 5px;
   overflow: auto;
-  max-height: 500px;
+  max-height: 550px;
   word-wrap: normal;
 }
 
