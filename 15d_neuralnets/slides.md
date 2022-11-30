@@ -105,6 +105,7 @@ out1 = np.insert(out1, 0, 1, axis=1)
 z2 = (layer2 @ out1.T).T
 out2 = sigmoid(z2)
 ```
+[comment]: # (!!!)
 
 ## But...
 
